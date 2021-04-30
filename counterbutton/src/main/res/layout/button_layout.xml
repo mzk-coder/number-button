@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_background"
+        android:background="@drawable/button_empty_background"
+        android:paddingStart="@dimen/four_dp"
+        android:paddingEnd="@dimen/four_dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:textStyle="bold"
+        android:id="@+id/tv_count"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16sp"
+        app:tint="@color/black"
+        android:id="@+id/image_icon_add"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_baseline_add"/>
+
+    <Button
+        android:layout_width="40dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        app:icon="@drawable/ic_baseline_add"
+        app:iconSize="16sp"
+        app:iconGravity="end"
+        app:iconTint="@color/white"
+        android:visibility="invisible"
+        android:id="@+id/btn_add"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="28dp"/>
+
+    <Button
+        android:layout_width="40dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        app:icon="@drawable/ic_baseline_remove"
+        app:iconSize="16sp"
+        android:id="@+id/btn_remove"
+        app:iconTint="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="28dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

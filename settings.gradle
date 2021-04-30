@@ -1,0 +1,3 @@
+include ':counterbutton'
+include ':app'
+rootProject.name = "Counter Button App"

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CounterButton">
+
+        <attr name="text" format="string" />
+        <attr name="primaryBackgroundColor" format="color" />
+        <attr name="primaryTextColor" format="color" />
+        <attr name="primaryText" format="reference" />
+        <attr name="primaryTextSize" format="dimension" />
+        <attr name="primaryStrokeColor" format="color" />
+        <attr name="primaryStrokeWidth" format="dimension" />
+
+        <attr name="secondaryBackgroundColor" format="color" />
+        <attr name="secondaryTextColor" format="color" />
+        <attr name="secondaryStrokeColor" format="color" />
+        <attr name="secondaryStrokeWidth" format="dimension" />
+
+
+
+    </declare-styleable>
+
+</resources>
