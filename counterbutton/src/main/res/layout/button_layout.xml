@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ADD"
+        android:text="@string/add"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="2dp"
         android:textStyle="bold"
@@ -35,12 +35,13 @@
         android:layout_width="16dp"
         android:layout_height="16sp"
         app:tint="@color/black"
+        android:contentDescription="@string/add"
         android:id="@+id/image_icon_add"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/ic_baseline_add"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:layout_width="40dp"
         style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         app:icon="@drawable/ic_baseline_add"
@@ -54,7 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_height="28dp"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:layout_width="40dp"
         style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         app:icon="@drawable/ic_baseline_remove"
