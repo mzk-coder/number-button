@@ -4,7 +4,6 @@ import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
-import android.util.Log
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
@@ -38,6 +37,8 @@ class CounterButton constructor(context: Context, attrs: AttributeSet?) :
     private var primaryStrokeWidth = 0
     private var secondaryStrokeWidth = 0
 
+    private var defaultText : String? = "ADD"
+
 
     private var count: Int = 0
 
@@ -59,6 +60,8 @@ class CounterButton constructor(context: Context, attrs: AttributeSet?) :
 
 
         val attributes = context.obtainStyledAttributes(attrs, R.styleable.CounterButton)
+
+        defaultText = attributes.getString(R.styleable.CounterButton_defaultText)
 
         primaryBackgroundColor = attributes
             .getColor(R.styleable.CounterButton_primaryBackgroundColor, Color.BLACK)
@@ -196,7 +199,12 @@ class CounterButton constructor(context: Context, attrs: AttributeSet?) :
             if (addButton.visibility == View.VISIBLE) {
                 addButton.visibility = View.INVISIBLE
             }
-            countText.text = "ADD"
+            if (defaultText!=null){
+                countText.text = defaultText
+            }else{
+                countText.text = "ADD"
+            }
+
 
             (viewGroupBack.background as GradientDrawable?)?.setColor(primaryBackgroundColor)
             (viewGroupBack.background as GradientDrawable?)?.setStroke(primaryStrokeWidth, primaryStrokeColor)
